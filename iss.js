@@ -1,8 +1,8 @@
 const request = require('request');
-const urlIP = 'https://api.ipify.org?format=json';
+const url = 'https://freegeoip.app/json/';
 
 const fetchMyIP = function(callback) {
-  request(urlIP, (error, response, body) => {
+  request(url, (error, response, body) => {
     if (error) return callback(error, null);
 
     if (response.statusCode !== 200) {
@@ -25,7 +25,7 @@ const fetchMyIP = function(callback) {
 };
 
 const fetchCoordsByIP = function(ip, callback) {
-  
+
 };
 
 module.exports = {
